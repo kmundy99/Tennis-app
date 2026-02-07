@@ -1,0 +1,37 @@
+﻿# Tennis Scheduling App 
+## What we're building A web app where local tennis players can schedule games or find & join in for games others have scheduled. 
+## Key Features - 
+It has 3 pages
+
+
+1. Register - players can enter:
+   * Name
+   * Email address
+   * Phone number
+   * Male/Female
+   * Physical address
+   * NTRP level
+   * New matches looking for players Email Me/Text Me/Don’t Notify Me
+   * They can also delete themselves. If they delete themselves, the system automatically “removes” them from all “future matches” that they are registered for, the same way as if they would go and remove themselves.
+
+
+2. Find/Schedule a match - There is a calendar with filters on top.
+
+
+   * By default it shows the current week/month/year (much like the google calendar display) with matches I am already scheduled for on the calendar, with location and player names in the title and detailed location address and player name, email, phone & NTRP level in the description. 
+   * The filters allow me to query any combination of dates/times ranges, matches I am already scheduled for, matches that need players, or full matches, matches with specific players scheduled, matches within x miles of my address.
+   * I can also go in and create a new match
+      1. Pick a date and start and end  time
+      2. Pick a tennis court address (should be able to pick addresses via Google Maps)
+      3. Specify the minimum level to sign up. 
+      4. Specify Number of Players (default 4)
+      5. Organizer can “cancel” a match -  then all the players get notified and the match is deleted from the app.
+   * I can search by calendar period (from date and to date) & time bands (start time and end time) to find possible “open games” that are open to my level that fit completely within the times specified.. I should be able to see the calendar entry title and details.. If there are less than 4 players, I can add myself to the game. If there are already 4 players, I can add myself as “waitlist” - there are 3 spots for waitlist for each match. 
+   * I can remove myself from a match I am scheduled for, first person on the waitlist gets a text specifying location, other players and asking if player wants to join. If player says “yes”, they get added in. If no reply, or “no”, (or an hour later, if there is still a spot open), the next waitlisted person gets an email and so on. 
+   * A day before the match, the players get a reminder email/text with location & names of players & then again 1 hour before the match. 
+   * On creation of a new match & then again 3 days before a match, if there are less than 4 players registered, all registered and eligible players who have not “opted out of texts” get a text indicating details of the match and the open slots.
+
+
+
+
+ ## Tech Stack - I don't have preferences (let Claude decide)
