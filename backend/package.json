@@ -5,11 +5,15 @@
   "main": "index.js",
   "scripts": {
     "dev": "nodemon src/app.js",
+    "build": "echo 'No build step required'",
     "start": "node src/app.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "engines": {
+    "node": ">=18.0.0"
+  },
   "dependencies": {
     "cors": "^2.8.6",
     "dotenv": "^17.2.4",
