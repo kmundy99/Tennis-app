@@ -34,10 +34,11 @@ app.get('/api/health', async (req, res) => {
   res.json({
     status: 'ok',
     timestamp: new Date().toISOString(),
-    version: '1.0.2',
+    version: '1.0.3',
     database: dbStatus,
     hasDbUrl: !!process.env.DATABASE_URL,
     dbHost: process.env.DATABASE_URL ? new URL(process.env.DATABASE_URL).hostname : 'not set',
+    envKeys: Object.keys(process.env).sort(),
   });
 });
 
