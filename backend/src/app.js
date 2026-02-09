@@ -22,25 +22,8 @@ app.use('/api/matches', matchRoutes);
 app.use('/api/email', emailRoutes);
 
 // Health check
-app.get('/api/health', async (req, res) => {
-  const pool = require('./db/pool');
-  let dbStatus = 'unknown';
-  try {
-    await pool.query('SELECT 1');
-    dbStatus = 'connected';
-  } catch (err) {
-    dbStatus = 'error: ' + err.message;
-  }
-  res.json({
-    status: 'ok',
-    timestamp: new Date().toISOString(),
-    version: '1.0.3',
-    database: dbStatus,
-    hasDbUrl: !!process.env.DATABASE_URL,
-    dbUrlLength: (process.env.DATABASE_URL || '').length,
-    dbHost: process.env.DATABASE_URL ? new URL(process.env.DATABASE_URL).hostname : 'not set',
-    envKeys: Object.keys(process.env).sort(),
-  });
+app.get('/api/health', (req, res) => {
+  res.json({ status: 'ok', timestamp: new Date().toISOString() });
 });
 
 // Start notification scheduler
